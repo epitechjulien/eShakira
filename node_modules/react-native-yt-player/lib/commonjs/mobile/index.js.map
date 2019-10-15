@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.tsx"],"names":["Player"],"mappings":"mKAAA,wD,aAEeA,e","sourcesContent":["import Player from \"./Player\";\n\nexport default Player;\n"]}

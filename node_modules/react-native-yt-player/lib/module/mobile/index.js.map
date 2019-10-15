@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.tsx"],"names":["Player"],"mappings":"AAAA,MAAOA,CAAAA,MAAP,KAAmB,UAAnB,CAEA,cAAeA,CAAAA,MAAf","sourcesContent":["import Player from \"./Player\";\n\nexport default Player;\n"]}

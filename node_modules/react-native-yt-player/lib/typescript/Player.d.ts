@@ -1,0 +1,47 @@
+import { PureComponent } from "react";
+import Animated from "react-native-reanimated";
+import { YTWebViewState, PlayerState, PlayerProps } from "./types";
+export default class Player extends PureComponent<PlayerProps, PlayerState> {
+    static defaultProps: {
+        onFullScreen: () => void;
+        loop: boolean;
+        showFullScreenButton: boolean;
+        onStart: () => void;
+        style: {};
+        autoPlay: boolean;
+        onReady: () => void;
+        onError: () => void;
+        onPlay: () => void;
+        onPause: () => void;
+        onEnd: () => void;
+        onPlaying: () => void;
+        onDurationReady: () => void;
+        onStateChange: () => void;
+        onPlaybackRateChange: () => void;
+        onPlaybackQualityChange: () => void;
+    };
+    constructor(props: PlayerProps);
+    player: any;
+    _width: Animated.Value<number>;
+    _isUserUsingIconToFullScreen: boolean;
+    componentDidMount(): void;
+    componentWillUnmount(): void;
+    onDurationReady: (duration: number) => void;
+    onPlaying: (currentTime: number) => void;
+    onReady: () => void;
+    onError: () => void;
+    onEnd: () => void;
+    onStateChange: (state: YTWebViewState) => void;
+    onPlaybackRateChange: () => void;
+    onPlaybackQualityChange: () => void;
+    playVideo: () => void;
+    seekTo: (s: number) => Promise<void>;
+    pauseVideo: () => void;
+    toggleFS: () => void;
+    onRotated: (orientation: any) => void;
+    onBackButtonClick: () => boolean;
+    goToFullScreen: () => void;
+    goToInlineScreen: () => void;
+    onLayout: ({ nativeEvent: { layout: { x, y } } }: any) => void;
+    render(): JSX.Element;
+}
